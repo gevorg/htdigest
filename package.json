@@ -1,7 +1,7 @@
 {
 	"name": "htdigest",
 	"description": "Node.js package for HTTP Digest Authentication password file utility.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "Gevorg Harutyunyan (http://github.com/gevorg)",
 	"maintainers": [
 		{
@@ -16,7 +16,7 @@
 	},
 	"main": "./lib/htdigest.js",
 	"bin": {
-		"htpasswd": "./lib/htdigest-bin.js"
+		"htdigest": "./lib/htdigest-bin.js"
 	},
 	"licenses": [
 		{
