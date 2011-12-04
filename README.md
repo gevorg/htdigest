@@ -16,7 +16,7 @@ $ npm install -g htdigest
 ## Usage
 
 ```bash
-$ htpasswd [-c] passwordfile realm username
+$ htdigest [-c] passwordfile realm username
 ```	
 
 ## Arguments
