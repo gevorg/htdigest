@@ -1,6 +1,8 @@
 # htdigest
 [Node.js](http://nodejs.org/) package for HTTP Digest Authentication password file utility.
 
+[![Build Status](https://api.travis-ci.org/gevorg/htdigest.png)](https://travis-ci. org/gevorg/htdigest)
+
 ## Installation
 
 Via git (or downloaded tarball):
@@ -28,12 +30,17 @@ $ htdigest [-c] passwordfile realm username
 It uses [nodeunit](https://github.com/caolan/nodeunit/), so just run following command in package directory:
 
 ```bash
-$ nodeunit tests
+$ npm test
 ```
 
 ## Issues
 
 You can find list of issues using **[this link](http://github.com/gevorg/htdigest/issues)**.
+
+## Requirements
+
+ - **[Node.js](http://nodejs.org)** - Event-driven I/O server-side JavaScript       environment based on V8.
+ - **[npm](http://npmjs.org)** - Package manager. Installs, publishes and manages   node programs.
 
 ## Dependencies
 
