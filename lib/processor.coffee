@@ -25,7 +25,7 @@ module.exports =
   # Finalizes processing by printing output or changing password file. 
   finalize: (program) ->
       try
-        @syncFile program
+        module.exports.syncFile program
       catch error
         console.error error.message
         
