@@ -2,6 +2,7 @@
 [Node.js](http://nodejs.org/) package for HTTP Digest Authentication password file utility.
 
 [![Build Status](https://api.travis-ci.org/gevorg/htdigest.png)](https://travis-ci.org/gevorg/htdigest)
+[![Dependency Status](https://david-dm.org/gevorg/htdigest.png)](http://david-dm.org/gevorg/htdigest)
 
 ## Installation
 
