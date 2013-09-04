@@ -6,7 +6,7 @@ module.exports =
   # Test for process password function.
   testProcessPassword: (test) ->
     program = {'args': ["someText.txt", "someRealm", "someUser"]}
-    program.password = () ->
+    processor.readPassword = () ->
       test.done()  
 
     processor.process program

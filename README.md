@@ -47,6 +47,7 @@ You can find list of issues using **[this link](http://github.com/gevorg/htdiges
 
  - **[commander](https://github.com/visionmedia/commander.js/)** - node.js command-line interfaces made easy.
  - **[coffee-script](http://coffeescript.org/)** - CoffeeScript is a little language that compiles into JavaScript.
+ - **[prompt](https://github.com/flatiron/prompt)** - a beautiful command-line prompt for node.js.
 
 ## Development dependencies
 
