@@ -1,45 +1,47 @@
 {
-	"name": "htdigest",
-	"description": "Node.js package for HTTP Digest Authentication password file utility.",
-	"version": "2.0.4",
-	"author": "Gevorg Harutyunyan (http://github.com/gevorg)",
-	"maintainers": [
-		{
-			"name": "gevorg",
-			"email": "gevorg.ha@gmail.com"
-		}
-	],
-	"homepage": "http://github.com/gevorg/htdigest",
-	"repository": {
-		"type": "git",
-		"url": "http://github.com/gevorg/htdigest.git"
-	},
-	"main": "./lib/htdigest.js",
-	"bin": {
-		"htdigest": "./lib/htdigest.js"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://github.com/gevorg/htdigest/blob/master/LICENSE"
-		}
-	],
-	"bugs": {
-		"url": "http://github.com/gevorg/htdigest/issues"
-	},
-	"dependencies": {
-		"coffee-script": "1.8.0",
-		"commander": "2.0.0",
-		"prompt": "0.2.11"
-	},
-	"devDependencies": {
-		"nodeunit": "0.9.0"
-	},
-	"engines": {
-		"node": ">=0.4.1"
-	},
-   "scripts": {
-      "test": "node ./node_modules/nodeunit/bin/nodeunit tests"
-   },
-	"keywords": ["node", "htdigest", "http", "server", "digest", "access", "authentication"]
+  "name": "htdigest",
+  "description": "Node.js package for HTTP Digest Authentication password file utility.",
+  "version": "2.0.5",
+  "author": "Gevorg Harutyunyan (http://github.com/gevorg)",
+  "maintainers": [
+    {
+      "name": "gevorg",
+      "email": "gevorg.ha@gmail.com"
+    }
+  ],
+  "homepage": "http://github.com/gevorg/htdigest",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gevorg/htdigest.git"
+  },
+  "main": "./gensrc/htdigest.js",
+  "bin": {
+    "htdigest": "./gensrc/htdigest.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/gevorg/htdigest/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "http://github.com/gevorg/htdigest/issues"
+  },
+  "dependencies": {
+    "commander": "2.0.0",
+    "prompt": "0.2.11"
+  },
+  "devDependencies": {
+    "coffee-script": "1.8.0",
+    "nodeunit": "0.9.0"
+  },
+  "engines": {
+    "node": ">=0.4.1"
+  },
+  "scripts": {
+    "test": "node ./node_modules/nodeunit/bin/nodeunit tests",
+    "prepublish": "rm -rf gensrc && node ./node_modules/coffee-script/bin/coffee --compile -o gensrc src",
+    "pretest": "npm run prepublish"
+  },
+  "keywords": ["node", "htdigest", "http", "server", "digest", "access", "authentication"]
 }
