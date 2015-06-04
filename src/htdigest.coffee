@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 # Importing local modules.
 program = require './program'
 processor = require './processor'
