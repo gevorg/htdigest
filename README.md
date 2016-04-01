@@ -1,15 +1,15 @@
 # htdigest
 [Node.js](http://nodejs.org/) package for HTTP Digest Authentication password file utility.
 
-[![Build Status](https://api.travis-ci.org/gevorg/htdigest.png)](https://travis-ci.org/gevorg/htdigest)
-[![Dependency Status](https://david-dm.org/gevorg/htdigest.png)](https://david-dm.org/gevorg/htdigest)
+[![Build Status](https://api.travis-ci.org/http-auth/htdigest.png)](https://travis-ci.org/http-auth/htdigest)
+[![Dependency Status](https://david-dm.org/http-auth/htdigest.png)](https://david-dm.org/http-auth/htdigest)
 
 ## Installation
 
 Via git (or downloaded tarball):
 
 ```bash
-$ git clone git://github.com/gevorg/htdigest.git
+$ git clone git://github.com/http-auth/htdigest.git
 ```
 Via [npm](http://npmjs.org/):
 
@@ -36,7 +36,7 @@ $ npm test
 
 ## Issues
 
-You can find list of issues using **[this link](http://github.com/gevorg/htdigest/issues)**.
+You can find list of issues using **[this link](http://github.com/http-auth/htdigest/issues)**.
 
 ## Requirements
 
