@@ -12,7 +12,7 @@
   "homepage": "http://github.com/gevorg/htdigest",
   "repository": {
     "type": "git",
-    "url": "http://github.com/gevorg/htdigest.git"
+    "url": "http://github.com/http-auth/htdigest.git"
   },
   "main": "./gensrc/htdigest.js",
   "bin": {
@@ -21,11 +21,11 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/gevorg/htdigest/blob/master/LICENSE"
+      "url": "http://github.com/http-auth/htdigest/blob/master/LICENSE"
     }
   ],
   "bugs": {
-    "url": "http://github.com/gevorg/htdigest/issues"
+    "url": "http://github.com/http-auth/htdigest/issues"
   },
   "dependencies": {
     "commander": "2.0.0",
