@@ -1,6 +1,6 @@
 'use strict';
 
-// Importing local modules.
+// Importing modules.
 import program from 'commander'
 import * as processor from './processor'
 
