@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 
-require("../gensrc/htdigest");
+var settings = require('../package.json');
+require("../gensrc/htdigest").default(settings.version, process.argv);
