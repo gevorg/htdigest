@@ -65,30 +65,28 @@ export function readPassword(program) {
     let rePassportOption = [{name: 'rePassword', description: 'Re-type new password:', hidden: true}];
 
     // Try to read password.
-    setTimeout(function () {
-        prompt.get(passportOption, function (err, result) {
-            if (!err) {
-                let password = result.password;
-                setTimeout(function () {
-                    prompt.get(rePassportOption, function (err, result) {
-                        if (!err && password == result.rePassword) {
-                            program.args.push(password);
+    prompt.get(passportOption, function (err, result) {
+        if (!err) {
+            let password = result.password;
+            setTimeout(function () {
+                prompt.get(rePassportOption, function (err, result) {
+                    if (!err && password == result.rePassword) {
+                        program.args.push(password);
 
-                            try {
-                                syncFile(program);
-                            } catch (err) {
-                                console.error(err.message);
-                            }
-                        } else {
-                            console.error("\nPassword verification error.");
+                        try {
+                            syncFile(program);
+                        } catch (err) {
+                            console.error(err.message);
                         }
-                    });
-                }, 50);
-            } else {
-                console.error("\nPassword verification error.");
-            }
-        });
-    }, 50);
+                    } else {
+                        console.error("\nPassword verification error.");
+                    }
+                });
+            }, 50);
+        } else {
+            console.error("\nPassword verification error.");
+        }
+    });
 }
 
 // Process command.
