@@ -39,7 +39,7 @@
     "chai": "^3.5.0"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=5"
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
