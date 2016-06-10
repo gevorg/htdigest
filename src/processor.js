@@ -57,7 +57,7 @@ export function syncFile(program) {
 }
 
 // Read password.
-export function readPassword(program) {
+function readPassword(program) {
     prompt.message = "";
     prompt.delimiter = "";
 
