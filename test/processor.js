@@ -4,7 +4,7 @@
 import fs from 'fs'
 
 // Expect module.
-import {expect} from 'chai';
+import {expect} from 'chai'
 
 // Source.
 import * as processor from '../gensrc/processor'
