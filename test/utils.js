@@ -4,7 +4,7 @@
 import {expect} from 'chai'
 
 // Source.
-import * as utils from '../gensrc/utils'
+import * as utils from '../src/utils'
 
 // Utils
 describe('utils', function () {

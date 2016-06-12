@@ -7,7 +7,7 @@ import fs from 'fs'
 import {expect} from 'chai'
 
 // Source.
-import * as processor from '../gensrc/processor'
+import * as processor from '../src/processor'
 
 // Processor.
 describe('processor', function () {
