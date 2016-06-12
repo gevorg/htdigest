@@ -6,3 +6,4 @@ htdigest.iml
 .settings
 src
 test
+.travis.yml
