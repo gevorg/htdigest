@@ -21,7 +21,7 @@ describe('processor', function () {
 
         it('file create', function () {
             // Input.
-            let program = {
+            const program = {
                 'create': true,
                 'args': ["password.txt", "sho", "gevorg", "loser"]
             };
@@ -30,7 +30,7 @@ describe('processor', function () {
             processor.syncFile(program);
 
             // Expectation.
-            let fileData = fs.readFileSync("password.txt", 'UTF-8');
+            const fileData = fs.readFileSync("password.txt", 'UTF-8');
             expect(fileData).to.equal("gevorg:sho:c188621dd651b5d3da4d3a1d3553ebcb\n");
         });
 
@@ -39,7 +39,7 @@ describe('processor', function () {
             fs.writeFileSync("password.txt", "gevorg:sho:c188621dd651b5d3da4d3a1d3553ebcb", 'UTF-8');
 
             // Input.
-            let program = {
+            const program = {
                 'args': ["password.txt", "sho", "gevorg", "winner"]
             };
 
@@ -47,17 +47,17 @@ describe('processor', function () {
             processor.syncFile(program);
 
             // Expectation.
-            let fileData = fs.readFileSync("password.txt", 'UTF-8');
+            const fileData = fs.readFileSync("password.txt", 'UTF-8');
             expect(fileData).to.equal("gevorg:sho:8acff7c997e8afb4831290c93db09c95\n");
         });
 
         it('file add', function () {
             // Prepare file.
-            let initData = "gevorg:sho:8acff7c997e8afb4831290c93db09c95";
+            const initData = "gevorg:sho:8acff7c997e8afb4831290c93db09c95";
             fs.writeFileSync("password.txt", initData, 'UTF-8');
 
             // Input.
-            let program = {
+            const program = {
                 'args': ["password.txt", "thegreat", "tigran", "sea"]
             };
 
@@ -65,22 +65,23 @@ describe('processor', function () {
             processor.syncFile(program);
 
             // Expectation.
-            let fileData = fs.readFileSync("password.txt", 'UTF-8');
+            const fileData = fs.readFileSync("password.txt", 'UTF-8');
             expect(fileData).to.equal(`${initData}\ntigran:thegreat:07e9e983c2c8d2c20826350dae5e72fc\n`);
         });
 
-        it('file add, not existing', function () {
+        it('file add, not existing', function (done) {
             // Input.
-            let program = {
+            const program = {
                 'args': ["password.txt", "losers", "serob", "dragon"]
             };
 
-            let preservedLog = console.log;
+            const preservedLog = console.log;
             console.error = function () {
                 console.error = preservedLog;
                 console.error.apply(console, arguments);
 
                 expect(arguments[0]).to.equal("Cannot modify file password.txt; use '-c' to create it.");
+                done();
             };
 
             // Source.

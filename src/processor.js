@@ -61,13 +61,13 @@ function readPassword(program) {
     prompt.message = "";
     prompt.delimiter = "";
 
-    let passportOption = [{name: 'password', description: 'New password:', hidden: true}];
-    let rePassportOption = [{name: 'rePassword', description: 'Re-type new password:', hidden: true}];
+    const passportOption = [{name: 'password', description: 'New password:', hidden: true}];
+    const rePassportOption = [{name: 'rePassword', description: 'Re-type new password:', hidden: true}];
 
     // Try to read password.
     prompt.get(passportOption, function (err, result) {
         if (!err) {
-            let password = result.password;
+            const password = result.password;
             setTimeout(function () {
                 prompt.get(rePassportOption, function (err, result) {
                     if (!err && password == result.rePassword) {
