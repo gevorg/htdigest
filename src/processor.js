@@ -12,12 +12,12 @@ import prompt from 'prompt'
 // Sync file function.
 export function syncFile(program) {
     // Read params.
-    let passwordFile = program.args[0];
-    let realm = program.args[1];
-    let username = program.args[2];
+    const passwordFile = program.args[0];
+    const realm = program.args[1];
+    const username = program.args[2];
 
     // Encode file data.
-    let writeData = utils.encode(program);
+    const writeData = utils.encode(program);
 
     // Collectors.
     let found = false;
@@ -32,7 +32,7 @@ export function syncFile(program) {
         }
 
         // Read lines.
-        let lines = fs.readFileSync(passwordFile, 'UTF-8').split("\n");
+        const lines = fs.readFileSync(passwordFile, 'UTF-8').split("\n");
 
         // Loop lines.
         lines.forEach(line => {
