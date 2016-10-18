@@ -1,16 +1,19 @@
 "use strict";
 
 // Utils.
-import * as utils from './utils'
+const utils = require('./utils');
 
 // FS.
-import fs from 'fs'
+const fs = require('fs');
 
 // Prompt module.
-import prompt from 'prompt'
+const prompt = require('prompt');
+
+// Export object;
+const processor = {};
 
 // Sync file function.
-export function syncFile(program) {
+processor.syncFile = (program) => {
     // Read params.
     const passwordFile = program.args[0];
     const realm = program.args[1];
@@ -54,7 +57,7 @@ export function syncFile(program) {
 
     // Write data.
     fs.writeFileSync(passwordFile, newLines.join("\n") + "\n", 'UTF-8');
-}
+};
 
 // Read password.
 function readPassword(program) {
@@ -65,16 +68,16 @@ function readPassword(program) {
     const rePassportOption = [{name: 'rePassword', description: 'Re-type new password:', hidden: true}];
 
     // Try to read password.
-    prompt.get(passportOption, function (err, result) {
+    prompt.get(passportOption, (err, result) => {
         if (!err) {
             const password = result.password;
             setTimeout(function () {
-                prompt.get(rePassportOption, function (err, result) {
+                prompt.get(rePassportOption, (err, result) => {
                     if (!err && password == result.rePassword) {
                         program.args.push(password);
 
                         try {
-                            syncFile(program);
+                            processor.syncFile(program);
                         } catch (err) {
                             console.error(err.message);
                         }
@@ -90,10 +93,13 @@ function readPassword(program) {
 }
 
 // Process command.
-export function exec(program) {
+processor.exec = (program) => {
     if (program.args.length === 3) {
         readPassword(program);
     } else {
         program.help();
     }
-}
+};
+
+// Export.
+module.exports = processor;

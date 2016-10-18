@@ -1,16 +1,16 @@
 "use strict";
 
 // Expect module.
-import {expect} from 'chai'
+const expect = require('chai').expect;
 
 // Source.
-import * as utils from '../src/utils'
+const utils = require('../src/utils');
 
 // Utils
-describe('utils', function () {
+describe('utils', () => {
     // Tests for md5
-    describe('#md5', function () {
-        it('hash should be correct', function () {
+    describe('#md5', () => {
+        it('hash should be correct', () => {
             // Source.
             let hash = utils.md5("devochka");
 
@@ -20,10 +20,10 @@ describe('utils', function () {
     });
 
     // Tests for encode
-    describe('#encode', function () {
-        it('encoded result should be correct', function () {
+    describe('#encode', () => {
+        it('encoded result should be correct', () => {
             // Prepare input.
-            var input = {
+            let input = {
                 'args': ["password.txt", "superRealm", "superUser"]
             };
 

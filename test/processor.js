@@ -1,25 +1,25 @@
 "use strict";
 
 // FS.
-import fs from 'fs'
+const fs = require('fs');
 
 // Expect module.
-import {expect} from 'chai'
+const expect = require('chai').expect;
 
 // Source.
-import * as processor from '../src/processor'
+const processor = require('../src/processor');
 
 // Processor.
-describe('processor', function () {
+describe('processor', () => {
     // Tests for syncFile.
-    describe('#syncFile', function () {
+    describe('#syncFile', () => {
         afterEach(function() {
             if (fs.existsSync("password.txt")) {
                 fs.unlinkSync("password.txt");
             }
         });
 
-        it('file create', function () {
+        it('file create', () => {
             // Input.
             const program = {
                 'create': true,
@@ -34,7 +34,7 @@ describe('processor', function () {
             expect(fileData).to.equal("gevorg:sho:c188621dd651b5d3da4d3a1d3553ebcb\n");
         });
 
-        it('file update', function () {
+        it('file update', () => {
             // Prepare file.
             fs.writeFileSync("password.txt", "gevorg:sho:c188621dd651b5d3da4d3a1d3553ebcb", 'UTF-8');
 
@@ -51,7 +51,7 @@ describe('processor', function () {
             expect(fileData).to.equal("gevorg:sho:8acff7c997e8afb4831290c93db09c95\n");
         });
 
-        it('file add', function () {
+        it('file add', () => {
             // Prepare file.
             const initData = "gevorg:sho:8acff7c997e8afb4831290c93db09c95";
             fs.writeFileSync("password.txt", initData, 'UTF-8');
@@ -69,7 +69,7 @@ describe('processor', function () {
             expect(fileData).to.equal(`${initData}\ntigran:thegreat:07e9e983c2c8d2c20826350dae5e72fc\n`);
         });
 
-        it('file add, not existing', function (done) {
+        it('file add, not existing', (done) => {
             // Input.
             const program = {
                 'args': ["password.txt", "losers", "serob", "dragon"]
