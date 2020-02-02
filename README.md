@@ -14,12 +14,12 @@ Via [npm](http://npmjs.org/):
 
 ```bash
 $ npm install -g htdigest
-```	
+```    
 ## Usage
 
 ```bash
 $ htdigest [-c] passwordfile realm username
-```	
+```    
 
 ## Options
 
