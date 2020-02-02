@@ -1,7 +1,7 @@
 # htdigest
 [Node.js](http://nodejs.org/) package for HTTP Digest Authentication password file utility.
 
-[![Build Status](https://api.travis-ci.org/http-auth/htdigest.png)](https://travis-ci.org/http-auth/htdigest)
+[![build](https://github.com/http-auth/htdigest/workflows/build/badge.svg)](https://github.com/http-auth/htdigest/actions?query=workflow%3Abuild)
 
 ## Installation
 
@@ -46,11 +46,6 @@ You can find list of issues using **[this link](http://github.com/http-auth/htdi
 
  - **[commander](https://github.com/visionmedia/commander.js/)** - node.js command-line interfaces made easy.
  - **[prompt](https://github.com/flatiron/prompt)** - a beautiful command-line prompt for node.js.
-
-## Development dependencies
-
- - **[mocha](https://mochajs.org/)** - simple, flexible, fun javascript test framework for node.js & the browser.
- - **[chai](http://chaijs.com/)** - BDD / TDD assertion framework for node.js and the browser that can be paired with any testing framework.
 
 ## License
 

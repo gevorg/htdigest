@@ -11,6 +11,7 @@ describe('newline', () => {
     // Tests for sha1.
     describe('#check', () => {
         it('line endings should be linux style', (done) => {
+            // eslint-disable-next-line node/prefer-promises/fs
             fs.readFile(__dirname + '/../bin/htdigest', (err, data) => {
                 expect(-1 === data.toString().indexOf('\n\r')).to.true;
                 done();
